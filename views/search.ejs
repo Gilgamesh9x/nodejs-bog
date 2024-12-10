@@ -1,0 +1,17 @@
+<div class="author">
+  <h1 class="author__heading">Search Results</h1>
+</div>
+<section class="articles">
+  <ul class="article-ul">
+    <% postsToDisplay.forEach(post => { %>
+    <li>
+      <a href="/post/<%= post.postNumber %>">
+        <span><%= post.postTitle %></span>
+        <span class="article-list__date"
+          ><%= new Intl.DateTimeFormat("de-DE").format(post.postDate) %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</section>
